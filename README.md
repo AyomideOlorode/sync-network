@@ -1,52 +1,72 @@
-# sync-network
-A digital emergency liquidity network redefining the 'Urgent 2k' as community trust units. Built for Wema Hackaholics 7.0
+# QuickSync ⚡️ Soro
+**The Voice-Native Emergency Liquidity Network (Powered by Wema Bank)**
+*Built for Hackaholics 7.0*
 
 ## 🔗 Hackathon Submission Links
-1. **Live Frontend Application:** [Insert Vercel/Netlify URL Here]
-2. **Live Backend API Endpoint:** [Insert API URL Here]
+1. **Live Frontend Application (Command Center):** [Insert Vercel/Netlify URL Here]
+2. **Live Backend API Endpoint (Soro Engine):** [Insert API URL Here]
 3. **Recorded Loom Demo:** [Insert Loom URL Here]
 
 ---
 
-## 1. Project Description: The "Urgent 2k" Dilemma
-Everyday Nigerians frequently face micro-emergencies (transport, data, food). Currently, their only options for an "Urgent ₦2k" are begging friends (loss of dignity) or using unregulated loan apps (entering a predatory ₦5k debt trap). 
+## 1. Project Description: The Ultimate Financial Inclusion Engine
+Everyday Nigerians frequently face micro-emergencies (the "Urgent 2k"). Currently, their only options are begging friends or using unregulated loan apps that rely on predatory debt traps and public shame. Furthermore, existing digital solutions require smartphones and internet access, locking out the bottom of the pyramid.
 
-**QuickSync Network** solves this by transforming micro-loans into a community-powered liquidity network based on **Trust Units**. Inspired by how the Dangote IPO democratized ownership, we have turned the "Urgent 2k" into a low-risk, high-velocity financial reward system for the masses.
+Our solution merges two powerful engines: **QuickSync** (The Liquidity Network) and **Soro** (The Conversational Voice Layer).
 
-### How It Works: The Give-to-Get Priority System
-* **For the Requester:** Need ₦2,000 urgently? Get matched with a community provider instantly. Identities are masked to protect user dignity.
-* **For the Provider:** Have idle cash? Buy a ₦2,000 "Unit of Ownership". By helping the community, you earn Trust Points and a fast ROI.
-* **The Magic:** Giving increases your points. Taking converts your points. When you consistently fund units, you build an "Excellent" Trust Score. When *you* eventually experience an emergency, the network prioritizes your request and funds you in seconds.
+### A. The QuickSync Liquidity Network (The Engine)
+QuickSync transforms micro-loans into a community-powered liquidity network based on **Trust Units**. 
+* **Lenders / B2B Partners** use our sleek Web App to buy ₦2,000 "Units of Ownership." 
+* Every unit carries a 5% return. We use a **60/40 Revenue Split**: The lender earns 60% (₦60) plus Trust Points, and the platform retains 40% (₦40).
+* By giving liquidity, lenders earn "Priority Trust," guaranteeing they get funded instantly when they face their own emergencies.
 
-## 2. The Unit Economics (The 60/40 Split)
-QuickSync is highly profitable on day one. Every ₦2,000 micro-unit carries a flat 5% (₦100) return.
-* **The Provider** takes 60% (₦60) as their ROI.
-* **The Platform** retains 40% (₦40) as a transaction fee.
-* At just 10,000 micro-transactions a day, the platform generates ₦400,000 in daily revenue purely from micro-fees.
+### B. Soro Conversational AI (The Accessibility Layer)
+Borrowers do not need to download an app. They simply call our toll-free number.
+* **Voice-Native:** Our AI, Ayo, speaks Yoruba, Nigerian Pidgin, and English. A market woman can naturally say, "Ayo, I need 2k for market goods."
+* **Deterministic Security:** Soro holds no funds and gives AI *zero* authority over money. AI only parses intent. The deterministic Fastify backend handles policy, executes the transfer via Wema Bank, and uses highly secure **DTMF keypad PIN authorization** (never sent to the LLM).
 
-## 3. Wema Bank Integration (The ALAT Flywheel)
-QuickSync is designed to be a massive, zero-CAC user acquisition and deposit-generating engine for Wema Bank:
-1. **The ALAT Zero-CAC Funnel:** When a provider wants to withdraw their yield, they are prompted to route it instantly to an ALAT account (0 fees). If they don’t have one, we API-provision a Tier 1 ALAT wallet. We acquire pre-vetted, high-trust users for Wema Bank at ₦0 Customer Acquisition Cost.
-2. **B2B Emergency Circles (CASA Deposits):** We provide SaaS infrastructure for universities and corporations to run their own internal emergency funds. To launch a circle, organizations must hold their liquidity pool in a Wema Corporate Account, generating massive zero-cost deposits (CASA).
-3. **The Institutional Whale:** When community P2P liquidity runs low, Wema Bank’s backend acts as the algorithmic "Whale," automatically buying up ₦2k units from users with elite Trust Scores—deploying capital safely and earning the 60% provider profit at scale.
+## 2. Wema Bank Integration (The ALAT Flywheel)
+1. **The ALAT Zero-CAC Funnel:** When a web lender withdraws their QuickSync yield, they are routed to ALAT (Instant + 0 Fees). If they don’t have an account, we API-provision a Tier 1 ALAT wallet. We acquire pre-vetted, high-trust users for Wema Bank at ₦0 Customer Acquisition Cost.
+2. **The Institutional Whale:** When community P2P liquidity runs low, Wema Bank’s backend acts as the algorithmic "Whale," automatically funding Soro voice requests from users with elite Trust Scores—deploying capital safely and earning the 60% profit at scale.
 
-## 4. Technical Architecture & Alternative Data
-* **Frontend:** Next.js, React, Tailwind CSS (Mobile-first SPA).
-* **Backend:** Python / FastAPI.
-* **The Trust Engine:** Instead of relying purely on backward-looking credit bureaus, our proprietary algorithm tracks high-frequency community behavior (funding speed, repayment velocity, "Pay it Forward" donations) to generate a dynamic Alternative Data Risk Score for Wema Bank.
+## 3. Architecture at a Glance
+**Frontend (Lender Dashboard):** Next.js, React, Tailwind CSS.
+**Backend (Soro Engine):** Node 24, Fastify, SQLite, Twilio.
+* *Flow:* Phone → Twilio (live) / Scenario Engine (demo) → Voice Layer (Ayo) → Intent + Context → Policy + Validation (DTMF PIN) → Banking Engine → Wema Adapter → Command Center Web App.
 
-## 5. Local Setup Instructions
-To run this repository locally:
+## 4. The Forward Deployed Team
+* **Ayomide** – Product Developer
+* **Daniel** – Technical Lead
+* **Abraham** – Business Developer
+* **Victoria** – Design Lead
+* **Emmanuel** – User Experience (UX) Lead
+---
+
+## 5. Local Setup & Quick Start (Soro Backend)
+To run the deterministic AI backend and simulated Wema banking core locally:
 
 ```bash
-# Clone the repository
-git clone [https://github.com/yourusername/quicksync-network.git](https://github.com/yourusername/quicksync-network.git)
+# Ensure correct environment
+nvm use && corepack enable          # Node 24.19.0, PNPM 11.22.0
 
-# Navigate into the frontend directory
-cd quicksync-network
+# Setup Environment
+cp .env.example .env
 
-# Install dependencies
-npm install
+# Install Dependencies
+pnpm install
 
-# Run the development server
-npm run dev
+# Check & Build
+pnpm typecheck && pnpm lint && pnpm test && pnpm build
+
+# Seed Local SQLite Demo Data
+pnpm db:reset && pnpm db:seed       
+
+# Start the Fastify API
+pnpm --filter @soro/api start        # http://localhost:3000
+```
+
+### Run a Local Scenario Test (No Twilio required)
+```bash
+curl -s -X POST localhost:3000/api/demo/run-scenario   -H 'content-type: application/json'   -d '{"phone":"08030000001","turns":["I need an urgent 2k for transport","yes"],"demoPin":"1234"}'
+```
+*Note: Demo Mode utilizes simulated banking data but runs through the real engine path with strict security validations.*
